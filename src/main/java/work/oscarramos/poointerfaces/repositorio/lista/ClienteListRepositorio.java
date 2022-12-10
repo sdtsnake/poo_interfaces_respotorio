@@ -1,6 +1,8 @@
-package work.oscarramos.poointerfaces.repositorio;
+package work.oscarramos.poointerfaces.repositorio.lista;
 
 import work.oscarramos.poointerfaces.modelo.Cliente;
+import work.oscarramos.poointerfaces.repositorio.AbstracListRepositorio;
+import work.oscarramos.poointerfaces.repositorio.Direccion;
 
 import java.util.ArrayList;
 import java.util.List;

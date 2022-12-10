@@ -1,9 +1,9 @@
 package work.oscarramos.poointerfaces;
 
 import work.oscarramos.poointerfaces.modelo.Cliente;
-import work.oscarramos.poointerfaces.repositorio.AbstracListRepositorio;
-import work.oscarramos.poointerfaces.repositorio.ClienteListRepositorio;
+import work.oscarramos.poointerfaces.repositorio.CrudRepositorio;
 import work.oscarramos.poointerfaces.repositorio.Direccion;
+import work.oscarramos.poointerfaces.repositorio.lista.ClienteListRepositorio;
 import work.oscarramos.poointerfaces.repositorio.OrdenablePraginableCrudRepositorio;
 
 import java.util.List;
