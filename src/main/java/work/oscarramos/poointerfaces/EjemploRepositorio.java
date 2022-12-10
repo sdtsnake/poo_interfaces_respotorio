@@ -1,6 +1,7 @@
 package work.oscarramos.poointerfaces;
 
 import work.oscarramos.poointerfaces.modelo.Cliente;
+import work.oscarramos.poointerfaces.repositorio.AbstracListRepositorio;
 import work.oscarramos.poointerfaces.repositorio.ClienteListRepositorio;
 import work.oscarramos.poointerfaces.repositorio.Direccion;
 import work.oscarramos.poointerfaces.repositorio.OrdenablePraginableCrudRepositorio;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public class EjemploRepositorio {
     public static void main(String[] args) {
-        OrdenablePraginableCrudRepositorio repo = new ClienteListRepositorio();
+        OrdenablePraginableCrudRepositorio<Cliente> repo = new ClienteListRepositorio();
 
         repo.crear(new Cliente("Oscar","Ramos"));
         repo.crear(new Cliente("Paula","Nueñz"));
