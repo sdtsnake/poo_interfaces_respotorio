@@ -1,5 +1,7 @@
 package work.oscarramos.poointerfaces;
 
+import work.oscarramos.excepciones.AccesoDatoException;
+import work.oscarramos.excepciones.LecturaAccesoDatoException;
 import work.oscarramos.poointerfaces.modelo.Cliente;
 import work.oscarramos.poointerfaces.modelo.Producto;
 import work.oscarramos.poointerfaces.repositorio.CrudRepositorio;
@@ -11,6 +13,7 @@ import java.util.List;
 
 public class EjemploRepositorioProducto {
     public static void main(String[] args) {
+        try{
         OrdenablePraginableCrudRepositorio<Producto> repo = new ProductoListRepositorio();
 
         repo.crear(new Producto("Play Station 3",500000));
@@ -44,5 +47,12 @@ public class EjemploRepositorioProducto {
         repo.listar("precion",Direccion.DESC).forEach(System.out::println);
         System.out.println("======== Total ========");
         System.out.println("Total registros : " + repo.total());
+        } catch (LecturaAccesoDatoException la) {
+            System.out.println(la.getMessage());
+            la.getStackTrace();
+        } catch (AccesoDatoException a) {
+            System.out.println(a.getMessage());
+            a.getStackTrace();
+        }
     }
 }

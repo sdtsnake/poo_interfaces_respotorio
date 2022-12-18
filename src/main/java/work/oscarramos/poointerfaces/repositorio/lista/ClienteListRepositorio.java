@@ -1,5 +1,6 @@
 package work.oscarramos.poointerfaces.repositorio.lista;
 
+import work.oscarramos.excepciones.LecturaAccesoDatoException;
 import work.oscarramos.poointerfaces.modelo.Cliente;
 import work.oscarramos.poointerfaces.repositorio.AbstracListRepositorio;
 import work.oscarramos.poointerfaces.repositorio.Direccion;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public class ClienteListRepositorio extends AbstracListRepositorio<Cliente> {
     @Override
-    public void editar(Cliente cliente) {
+    public void editar(Cliente cliente) throws LecturaAccesoDatoException {
         Cliente cli = this.porId(cliente.getId());
         cli.setNombre(cliente.getNombre());
         cli.setApellido(cliente.getApellido());
